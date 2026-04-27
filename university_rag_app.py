@@ -213,7 +213,7 @@ section[data-testid="stSidebar"] {
 
 /* ── Input area ── */
 .stTextArea textarea {
-    background: rgba(255,255,255,0.04) !important;
+    background: #16222f !important;
     border: 1px solid rgba(143,168,190,0.2) !important;
     border-radius: 8px !important;
     color: #e6edf3 !important;
@@ -221,7 +221,9 @@ section[data-testid="stSidebar"] {
     font-size: 1rem !important;
 }
 .stTextArea textarea:focus {
+    background: #16222f !important;
     border-color: rgba(212,175,55,0.5) !important;
+    color: #e6edf3 !important; 
     box-shadow: 0 0 0 2px rgba(212,175,55,0.1) !important;
 }
 .stButton > button {
