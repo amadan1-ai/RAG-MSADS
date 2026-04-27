@@ -216,7 +216,7 @@ section[data-testid="stSidebar"] {
     background: rgba(255,255,255,0.04) !important;
     border: 1px solid rgba(143,168,190,0.2) !important;
     border-radius: 8px !important;
-    color: #e0d8c8 !important;
+    color: #e6edf3 !important;
     font-family: 'Source Sans 3', sans-serif !important;
     font-size: 1rem !important;
 }
