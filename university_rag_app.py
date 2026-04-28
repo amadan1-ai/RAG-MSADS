@@ -495,7 +495,7 @@ with st.sidebar:
     st.markdown('<div class="sidebar-label">Vector Store Path</div>', unsafe_allow_html=True)
     persist_dir = st.text_input(
         "Vector Store Path",
-        value= "./chroma_university_kb"",
+        value= "./chroma_university_kb",
         label_visibility="collapsed",
     )
 
