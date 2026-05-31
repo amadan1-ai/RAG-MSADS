@@ -227,6 +227,14 @@ section[data-testid="stSidebar"] {
     color: #e6edf3 !important;
     font-family: 'Source Sans 3', sans-serif !important;
     font-size: 1rem !important;
+    width: 100% !important;
+}
+
+/* ── Full-width content area ── */
+.block-container {
+    max-width: 100% !important;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
 }
 .stTextArea textarea:focus {
     background: #16222f !important;
@@ -559,7 +567,7 @@ with st.sidebar:
 
 
 # ── Main content ──────────────────────────────────────────────────────────────
-col_main, col_gap = st.columns([3, 1])
+col_main = st.container()
 
 with col_main:
 
