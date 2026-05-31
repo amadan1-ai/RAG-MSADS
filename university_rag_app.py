@@ -580,7 +580,6 @@ with col_main:
     alt="University of Chicago"
   />
   <h1>MS-ADS Knowledge Assistant</h1>
-  <p>Ask anything about programs, admissions, research, campus life, and more</p>
   <div class="gold-line"></div>
 </div>
 """, unsafe_allow_html=True)
