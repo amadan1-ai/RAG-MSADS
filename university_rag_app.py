@@ -477,12 +477,57 @@ if "total_sources" not in st.session_state:
 # ── Header ────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="uni-header">
-  <img
-    class="uni-logo"
-    src="https://www.uchicago.edu/assets/img/uc_logo_white.png"
-    alt="University of Chicago"
-    onerror="this.style.display='none'"
-  />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" width="60" height="75" style="display:block;margin:0 auto 1rem;">
+  <!-- Shield shape -->
+  <defs>
+    <clipPath id="shield-clip">
+      <path d="M80 4 L152 4 L152 120 Q152 170 80 196 Q8 170 8 120 L8 4 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Shield fill: UChicago maroon #800000 -->
+  <path d="M80 4 L152 4 L152 120 Q152 170 80 196 Q8 170 8 120 L8 4 Z" fill="#800000"/>
+  <!-- Shield border -->
+  <path d="M80 4 L152 4 L152 120 Q152 170 80 196 Q8 170 8 120 L8 4 Z" fill="none" stroke="#d4af37" stroke-width="3"/>
+  <!-- Horizontal divider (upper 45%) -->
+  <line x1="8" y1="92" x2="152" y2="92" stroke="#d4af37" stroke-width="2.5"/>
+  <!-- Phoenix (upper section) — stylised rising bird -->
+  <g clip-path="url(#shield-clip)" transform="translate(80,52)">
+    <!-- Body -->
+    <ellipse cx="0" cy="4" rx="12" ry="9" fill="#d4af37"/>
+    <!-- Wings spread -->
+    <path d="M-12 0 Q-30-20-38-8 Q-26-4-14 4Z" fill="#d4af37"/>
+    <path d="M12 0 Q30-20 38-8 Q26-4 14 4Z" fill="#d4af37"/>
+    <!-- Tail feathers -->
+    <path d="M-6 12 Q-14 28-10 36 Q-4 24 0 18Z" fill="#d4af37"/>
+    <path d="M0 14 Q0 30 0 38 Q4 26 0 14Z" fill="#d4af37"/>
+    <path d="M6 12 Q14 28 10 36 Q4 24 0 18Z" fill="#d4af37"/>
+    <!-- Head -->
+    <circle cx="0" cy="-6" r="7" fill="#d4af37"/>
+    <!-- Beak -->
+    <path d="M0-2 L6 0 L0 2Z" fill="#800000"/>
+  </g>
+  <!-- Open book (lower section) -->
+  <g transform="translate(80,138)">
+    <!-- Left page -->
+    <path d="M-32-14 Q-16-18 0-14 L0 14 Q-16 10-32 14Z" fill="#f0e6c8" opacity="0.9"/>
+    <!-- Right page -->
+    <path d="M32-14 Q16-18 0-14 L0 14 Q16 10 32 14Z" fill="#f0e6c8" opacity="0.9"/>
+    <!-- Spine -->
+    <rect x="-2" y="-15" width="4" height="30" fill="#d4af37"/>
+    <!-- Text lines left page -->
+    <line x1="-26" y1="-4" x2="-4" y2="-6" stroke="#800000" stroke-width="1.2" opacity="0.6"/>
+    <line x1="-26" y1="2" x2="-4" y2="0" stroke="#800000" stroke-width="1.2" opacity="0.6"/>
+    <line x1="-26" y1="8" x2="-4" y2="6" stroke="#800000" stroke-width="1.2" opacity="0.6"/>
+    <!-- Text lines right page -->
+    <line x1="4" y1="-6" x2="26" y2="-4" stroke="#800000" stroke-width="1.2" opacity="0.6"/>
+    <line x1="4" y1="0" x2="26" y2="2" stroke="#800000" stroke-width="1.2" opacity="0.6"/>
+    <line x1="4" y1="6" x2="26" y2="8" stroke="#800000" stroke-width="1.2" opacity="0.6"/>
+  </g>
+</svg>
+  <div style="font-family:'Playfair Display',serif;font-size:0.78rem;font-weight:700;
+    letter-spacing:0.18em;text-transform:uppercase;color:#d4af37;margin-bottom:1rem;">
+    The University of Chicago
+  </div>
   <h1>University Knowledge Assistant</h1>
   <p>Ask anything about programs, admissions, research, campus life, and more</p>
   <div class="gold-line"></div>
