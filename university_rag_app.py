@@ -67,6 +67,13 @@ html, body, [class*="css"] {
     margin: 0.9rem auto 0;
     border-radius: 2px;
 }
+.uni-logo {
+    display: block;
+    margin: 0 auto 1.2rem;
+    height: 72px;
+    width: auto;
+    filter: brightness(1) drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+}
 
 /* ── Sidebar ── */
 section[data-testid="stSidebar"] {
@@ -470,7 +477,13 @@ if "total_sources" not in st.session_state:
 # ── Header ────────────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="uni-header">
-  <h1>🎓 University Knowledge Assistant</h1>
+  <img
+    class="uni-logo"
+    src="https://www.uchicago.edu/assets/img/uc_logo_white.png"
+    alt="University of Chicago"
+    onerror="this.style.display='none'"
+  />
+  <h1>University Knowledge Assistant</h1>
   <p>Ask anything about programs, admissions, research, campus life, and more</p>
   <div class="gold-line"></div>
 </div>
