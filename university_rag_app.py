@@ -475,19 +475,7 @@ if "total_sources" not in st.session_state:
     st.session_state.total_sources = 0
 
 
-# ── Header ────────────────────────────────────────────────────────────────────
-st.markdown(f"""
-<div class="uni-header">
-  <img
-    class="uni-logo"
-    src="https://raw.githubusercontent.com/amadan1-ai/RAG-MSADS/main/logo-background.svg"
-    alt="University of Chicago"
-  />
-  <h1>MS-ADS Knowledge Assistant</h1>
-  <p>Ask anything about programs, admissions, research, campus life, and more</p>
-  <div class="gold-line"></div>
-</div>
-""", unsafe_allow_html=True)
+# ── Header moved inside col_main ────────────────────────────────────────────
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
@@ -574,6 +562,20 @@ with st.sidebar:
 col_main, col_gap = st.columns([3, 1])
 
 with col_main:
+
+    # ── Header ──
+    st.markdown(f"""
+<div class="uni-header">
+  <img
+    class="uni-logo"
+    src="https://raw.githubusercontent.com/amadan1-ai/RAG-MSADS/main/logo-background.svg"
+    alt="University of Chicago"
+  />
+  <h1>MS-ADS Knowledge Assistant</h1>
+  <p>Ask anything about programs, admissions, research, campus life, and more</p>
+  <div class="gold-line"></div>
+</div>
+""", unsafe_allow_html=True)
 
     # Query input
     query = st.text_area(
